@@ -16,8 +16,9 @@ searchButton.addEventListener("click",()=>{
 
 
 
-async function getCountry(countryName){
-const res = await fetch(`https://restcountries.com/v3.1/name/${countryName}`) ;
+async function getCountry(code){
+
+const res = await fetch(`https://restcountries.com/v2/alpha/${code}`) ;
 if(!res.ok){
     document.querySelector(".countries").innerHTML = `
     <h3> Oops! Something is wrong :: ${res.status} </h3>
@@ -27,13 +28,13 @@ if(!res.ok){
 
 } 
 const data = await res.json()
-flag = data[0].flags.svg
-console.log(data[0]);
+flag = data.flags.svg
+console.log(data);
 console.log(flag);
 
 document.querySelector("#iframe").src = flag
 
-updateScreen(data[0])
+updateScreen(data)
 
 }
 
@@ -50,14 +51,14 @@ const updateScreen=(country)=>{
     <div class="card mt-5" style="width: 18rem;">
         
         <div class="card-body">
-            <h5 class="card-title">${country.name.common}</h5>
+            <h5 class="card-title">${country.name}</h5>
             <p class="card-text">${region}</p>
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item"><i class="fas fa-lg fa-landmark"></i>${capital}</li>
             <li class="list-group-item"><i class="fas fa-lg fa-users"></i>${(population / 1_000_000).toFixed(1)}</li>
             <li class="list-group-item"><i class="fas fa-lg fa-comments"></i>${Object.values(currencies)[0].name},${Object.values(currencies)[0].symbol}</li>
-            <li class="list-group-item"> <i class="fas fa-lg fa-money-bill-wave"></i>${Object.values(languages)[0]}</li>
+            <li class="list-group-item"> <i class="fas fa-lg fa-money-bill-wave"></i>${Object.values(languages)[0].name}</li>
         </ul>
     </div>
     `
