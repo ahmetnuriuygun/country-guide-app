@@ -19,7 +19,15 @@ header h1{
   color:darkslateblue;
   line-height: 20px;
   margin: 30px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+}
+header h4{
+  color:rgb(130, 28, 0);
+  line-height: 20px;
+  margin: 30px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  
 }
 img {
   width: 400px;
