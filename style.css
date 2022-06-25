@@ -1,27 +1,58 @@
-body {
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #08AEEA;
+  background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+  background-repeat: no-repeat;
+}
+
+header{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  height: 100vh;
-  /* background: linear-gradient(to top left, #2e619c, #c0ceee); */
+  margin: 0 auto;
+  flex-direction: column;
+}
+header h1{
+  color:darkslateblue;
+  line-height: 20px;
+  margin: 30px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+img {
+  width: 400px;
+  height: 250px;
+  margin: 0 auto;
+}
+#searchdiv{
+  width: 300px;
+  border: 1px solid black;
+  background-color: white;
+}
+#searchdiv i{
+  margin-left: 2px;
+  color: darkslateblue;
+}
+#searchinput{
+  width: 280px;
+  height: 30px;
+  margin-top: 10px;
+  border: none;
 }
 
-.logo {
-  display: block;
-  margin-top: 1rem;
-  margin: auto;
-  width: 40vw;
+#searchbutton{
+  margin: 10px;
+  height: 30px;
+  width: 150px;
+  background-color:darkslateblue;
+  color: white;
 }
-
-.neighbour {
-  transform: scale(0.9) translateY(1rem);
-  margin-left: 0;
-}
-
-.countries {
-  /* margin-bottom: 8rem; */
-  /* margin-top: 1rem; */
-  font-size: 2rem;
-  opacity: 0;
-  transition: opacity 2s;
+#clearbutton{
+  margin: 10px;
+  height: 30px;
+  width: 150px;
+  background-color:darkslateblue;
+  color: white;
 }
