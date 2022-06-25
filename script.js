@@ -23,6 +23,12 @@ if(!res.ok){
     document.querySelector(".countries").innerHTML = `
     <h3> Oops! Something is wrong :: ${res.status} </h3>
     <img src="./404.png" alt="error image">  `
+    if(!searchInput.value){
+        alert('Please be sure that you write the country code true')
+        
+    }
+    
+   
 
     throw new Error("Error message")
 
