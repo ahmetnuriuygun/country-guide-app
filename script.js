@@ -74,6 +74,7 @@ const updateScreen=(country)=>{
 clearButton.addEventListener("click",()=>{
     document.querySelector(".countries").innerHTML = ""
     document.querySelector("#iframe").src = "./GW7p.gif"
+    searchButton.style.backgroundColor="darkslateblue"
 })
 
 searchDiv.onmouseover=()=>{
